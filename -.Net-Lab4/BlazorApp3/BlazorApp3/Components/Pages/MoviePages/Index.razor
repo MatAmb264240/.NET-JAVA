@@ -1,0 +1,119 @@
+﻿@page "/movies"
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Components.QuickGrid
+@inject BlazorApp3.Data.ApplicationDbContext DB
+@inject NavigationManager NavigationManager
+<PageTitle>Index</PageTitle>
+
+<h1>Index</h1>
+
+<p>
+    <a href="movies/create">Create New</a>
+</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+            <div class="card-body">
+
+                <QuickGrid Items="@MovieQueryable" Pagination="pagination">
+
+                     <PropertyColumn Property="@(m => m.Title)" Sortable="true" Class="country-name" Align="Align.Right">
+                        <ColumnOptions>
+                                <div class="search-box">
+                                    <input type="search" autofocus @onchange="SearchMovie" placeholder="Movie Title..." />
+                                </div>
+                        </ColumnOptions>
+
+                    </PropertyColumn>
+@*                      <PropertyColumn Property="movie => movie.Description" Sortable="true" Align="Align.Right" /> *@
+                        <PropertyColumn Property="movie => movie.RelaseDate" Format="yyyy-MM-dd" Sortable="true" Align="Align.Right" />
+                        <PropertyColumn Property="movie => movie.Rate" Sortable="true" Align="Align.Right" />
+
+                        <TemplateColumn Context="movie">
+                            <AuthorizeView>
+                                <Authorized>
+                                    <button class="btn btn-primary" @onclick="() =>EditMovie(movie.Id)">Edit</button>
+                                    <button class="btn btn-danger" @onclick="() => DeleteMovie(movie.Id)">Delete</button>
+                                </Authorized>
+                            </AuthorizeView>
+                            <button class="btn btn-info" @onclick="() => ViewDetails(movie.Id)">Details</button>
+                        </TemplateColumn>
+                </QuickGrid>
+            </div>
+            <div class="card-footer"><Paginator State="@pagination" /></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code{
+    PaginationState pagination = new PaginationState { ItemsPerPage = 3 };
+    IQueryable<Movie> MovieQueryable = Enumerable.Empty<Movie>().AsQueryable();
+
+    [SupplyParameterFromForm]
+    Movie movie { get; set; } = new();
+    DateOnly SelectedDate;
+    static List<Movie> MoviesList = new();
+
+    protected override void OnInitialized()
+    {
+        ConvertListToQueryable();
+
+    }
+    // Load data from List to the Queryable container
+    private void ConvertListToQueryable()
+    {
+        MoviesList = DB.Movie.ToList();
+        if (MoviesList is null) return;
+        foreach (var movie in MoviesList.OrderBy(_ => _.Id))
+        {
+            MovieQueryable = MovieQueryable.Concat(new[] { movie }.AsQueryable());
+        }
+        pagination.TotalItemCountChanged += (sender, eventArgs) => StateHasChanged();
+    }
+    void GetDataAgain()
+    {
+        MovieQueryable = Enumerable.Empty<Movie>().AsQueryable();
+        ConvertListToQueryable();
+    }
+    void SearchMovie(ChangeEventArgs e)
+    {
+        if (!string.IsNullOrEmpty(e.Value!.ToString()))
+        {
+            var result = MoviesList.Where(c => c.Title!.Contains(e.Value!.ToString()!, StringComparison.CurrentCultureIgnoreCase)).ToList();
+            MovieQueryable = result.AsQueryable();
+            if (result.Count == 0)
+            {
+                return;
+            }
+
+            if (result.Any())
+            {
+                foreach (var person in result.OrderBy(_ => _.Id))
+                    MovieQueryable = MovieQueryable.Concat(new[] { person }.AsQueryable());
+            }
+            return;
+        }
+        GetDataAgain();
+    }
+
+    // Metoda do edycji filmu
+    private void EditMovie(int movieId)
+    {
+        NavigationManager.NavigateTo($"movies/edit?id={movieId}");
+    }
+
+    // Metoda do usuwania filmu
+    private void DeleteMovie(int movieId)
+    {
+        NavigationManager.NavigateTo($"movies/delete?id={movieId}");
+    }
+
+    // Metoda do wyświetlania szczegółów filmu
+    private void ViewDetails(int movieId)
+    {
+        NavigationManager.NavigateTo($"movies/details?id={movieId}");
+    }
+}

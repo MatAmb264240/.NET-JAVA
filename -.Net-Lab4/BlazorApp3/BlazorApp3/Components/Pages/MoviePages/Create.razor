@@ -1,0 +1,65 @@
+﻿@page "/movies/create"
+@rendermode InteractiveServer
+@inject BlazorApp3.Data.ApplicationDbContext DB
+@using BlazorApp3.Components
+@inject NavigationManager NavigationManager
+
+<PageTitle>Create</PageTitle>
+
+<h1>Create</h1>
+
+<h4>Movie</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <EditForm method="post" Model="Movie" OnValidSubmit="AddMovie" FormName="create" Enhance>
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" />
+            <div class="mb-3">
+                <label for="title" class="form-label">Title:</label> 
+                <InputText id="title" @bind-Value="Movie.Title" class="form-control" /> 
+                <ValidationMessage For="() => Movie.Title" class="text-danger" /> 
+            </div>        
+            <div class="mb-3">
+                <label for="description" class="form-label">Description:</label> 
+                <InputText id="description" @bind-Value="Movie.Description" class="form-control" /> 
+                <ValidationMessage For="() => Movie.Description" class="text-danger" /> 
+            </div>        
+            <div class="mb-3">
+                <label for="relasedate" class="form-label">RelaseDate:</label> 
+                <InputDate id="relasedate" @bind-Value="Movie.RelaseDate" class="form-control" /> 
+                <ValidationMessage For="() => Movie.RelaseDate" class="text-danger" /> 
+            </div>        
+            <div class="mb-3">
+                <label for="rate" class="form-label">Rate:</label> 
+                <InputNumber id="rate" @bind-Value="Movie.Rate" class="form-control" /> 
+                <ValidationMessage For="() => Movie.Rate" class="text-danger" /> 
+            </div>
+            <div class="mb-3">
+                <label for="url" class="form-label">Url image:</label>
+                <InputText id="url" @bind-Value="Movie.url" class="form-control" />
+                <ValidationMessage For="() => Movie.url" class="text-danger" />
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+            <button class="btn btn-danger" @onclick="Back">Back</button>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+
+    [SupplyParameterFromForm]
+    public Movie Movie { get; set; } = new();
+
+    // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
+    public async Task AddMovie()
+    {
+        DB.Movie.Add(Movie);
+        await DB.SaveChangesAsync();
+        NavigationManager.NavigateTo("/movies");
+    }
+    private void Back()
+    {
+        NavigationManager.NavigateTo("/movies");
+    }
+}

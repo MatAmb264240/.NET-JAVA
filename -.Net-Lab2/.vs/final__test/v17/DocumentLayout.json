@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ambro\\OneDrive - Politechnika Wroclawska\\Pulpit\\final__test\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C4D5E585-4934-4535-8C42-B7D2DB6CD825}|final__test\\final__test.csproj|c:\\users\\ambro\\onedrive - politechnika wroclawska\\pulpit\\final__test\\final__test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4D5E585-4934-4535-8C42-B7D2DB6CD825}|final__test\\final__test.csproj|solutionrelative:final__test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4D5E585-4934-4535-8C42-B7D2DB6CD825}|final__test\\final__test.csproj|C:\\Users\\ambro\\OneDrive - Politechnika Wroclawska\\Pulpit\\final__test\\final__test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C4D5E585-4934-4535-8C42-B7D2DB6CD825}|final__test\\final__test.csproj|solutionrelative:final__test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4D5E585-4934-4535-8C42-B7D2DB6CD825}|final__test\\final__test.csproj|C:\\Users\\ambro\\OneDrive - Politechnika Wroclawska\\Pulpit\\final__test\\final__test\\deserialize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4D5E585-4934-4535-8C42-B7D2DB6CD825}|final__test\\final__test.csproj|solutionrelative:final__test\\deserialize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4D5E585-4934-4535-8C42-B7D2DB6CD825}|final__test\\final__test.csproj|C:\\Users\\ambro\\OneDrive - Politechnika Wroclawska\\Pulpit\\final__test\\final__test\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4D5E585-4934-4535-8C42-B7D2DB6CD825}|final__test\\final__test.csproj|solutionrelative:final__test\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 193,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ambro\\OneDrive - Politechnika Wroclawska\\Pulpit\\final__test\\final__test\\Form1.cs",
+              "RelativeDocumentMoniker": "final__test\\Form1.cs",
+              "ToolTip": "C:\\Users\\ambro\\OneDrive - Politechnika Wroclawska\\Pulpit\\final__test\\final__test\\Form1.cs [Design]*",
+              "RelativeToolTip": "final__test\\Form1.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T21:18:53.451Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Deserialize.cs",
+              "DocumentMoniker": "C:\\Users\\ambro\\OneDrive - Politechnika Wroclawska\\Pulpit\\final__test\\final__test\\Deserialize.cs",
+              "RelativeDocumentMoniker": "final__test\\Deserialize.cs",
+              "ToolTip": "C:\\Users\\ambro\\OneDrive - Politechnika Wroclawska\\Pulpit\\final__test\\final__test\\Deserialize.cs",
+              "RelativeToolTip": "final__test\\Deserialize.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T11:05:18.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DataAccess.cs",
+              "DocumentMoniker": "C:\\Users\\ambro\\OneDrive - Politechnika Wroclawska\\Pulpit\\final__test\\final__test\\DataAccess.cs",
+              "RelativeDocumentMoniker": "final__test\\DataAccess.cs",
+              "ToolTip": "C:\\Users\\ambro\\OneDrive - Politechnika Wroclawska\\Pulpit\\final__test\\final__test\\DataAccess.cs",
+              "RelativeToolTip": "final__test\\DataAccess.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T11:42:32.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\ambro\\OneDrive - Politechnika Wroclawska\\Pulpit\\final__test\\final__test\\Form1.cs",
+              "RelativeDocumentMoniker": "final__test\\Form1.cs",
+              "ToolTip": "C:\\Users\\ambro\\OneDrive - Politechnika Wroclawska\\Pulpit\\final__test\\final__test\\Form1.cs*",
+              "RelativeToolTip": "final__test\\Form1.cs*",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAAAJoAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T09:56:33.297Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

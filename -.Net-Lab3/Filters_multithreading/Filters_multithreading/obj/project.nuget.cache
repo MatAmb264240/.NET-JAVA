@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "kxcu2AN/p8pl0gQezDO5dbZknyJu5kPvPxojFIqfDwq9myVS2vMhOYzjO4ouRN3uTUjWs0i5K9+F9G2N3RJRuA==",
+  "success": true,
+  "projectFilePath": "D:\\All\\Studia\\Zajecia\\Semestr_6\\.NET JAVA\\Filters_multithreading\\Filters_multithreading\\Filters_multithreading.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ambro\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\ambro\\.nuget\\packages\\system.drawing.common\\8.0.3\\system.drawing.common.8.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

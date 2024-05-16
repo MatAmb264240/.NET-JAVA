@@ -1,0 +1,102 @@
+﻿@page "/Movies/editRate"
+@inject BlazorApp3.Data.ApplicationDbContext DB
+@using BlazorApp3.Components
+@inject NavigationManager NavigationManager
+@using Microsoft.EntityFrameworkCore
+
+<PageTitle>Edit</PageTitle>
+
+<h1>Edit</h1>
+
+<h4>Movie</h4>
+<hr />
+@if (Movie is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-4">
+            <EditForm method="post" Model="Movie" OnValidSubmit="UpdateMovie" FormName="edit" Enhance>
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+                <input type="hidden" name="Movie.Id" value="@Movie.Id" />
+                
+                <div class="mb-3">
+                    <label for="rate" class="form-label">Rate:</label>
+                    <InputNumber id="rate" @bind-Value="Movie.Rate" class="form-control" />
+                    <ValidationMessage For="() => Movie.Rate" class="text-danger" />
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </EditForm>
+        </div>
+    </div>
+}
+
+<div>
+    <a href="/movies">Back to List</a>
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    public int Id { get; set; }
+
+    [SupplyParameterFromForm]
+    public Movie? Movie { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Movie ??= await DB.Movie.FirstOrDefaultAsync(m => m.Id == Id);
+
+        if (Movie is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+
+    // To protect from overposting attacks, enable the specific properties you want to bind to.
+    // For more details, see https://aka.ms/RazorPagesCRUD.
+    public async Task UpdateMovie()
+    {
+        var existingMovie = await DB.Movie.FirstOrDefaultAsync(m => m.Id == Movie!.Id);
+
+        if (existingMovie != null)
+        {
+            // Calculate new rate based on existing rate and updated rate
+            var existingRateSum = existingMovie.Rate ?? 0;
+            var existingRateCount = existingMovie.Rate.HasValue ? 1 : 0;
+            var updatedRate = Movie!.Rate ?? 0;
+
+            var newRateSum = existingRateSum + updatedRate;
+            var newRateCount = existingRateCount + 1;
+
+            existingMovie.Rate = newRateSum / newRateCount;
+
+            DB.Update(existingMovie);
+
+            try
+            {
+                await DB.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!MovieExists(Movie!.Id))
+                {
+                    NavigationManager.NavigateTo("notfound");
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            NavigationManager.NavigateTo("/movies");
+        }
+    }
+
+    bool MovieExists(int id)
+    {
+        return DB.Movie.Any(e => e.Id == id);
+    }
+}

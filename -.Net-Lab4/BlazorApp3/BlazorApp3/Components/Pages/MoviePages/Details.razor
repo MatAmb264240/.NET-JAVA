@@ -1,0 +1,77 @@
+﻿@page "/movies/details"
+@rendermode InteractiveServer
+@inject BlazorApp3.Data.ApplicationDbContext DB
+@using BlazorApp3.Components
+@inject NavigationManager NavigationManager
+@using Microsoft.EntityFrameworkCore
+
+<PageTitle>Details</PageTitle>
+
+<h1>Details</h1>
+
+<div>
+    <h4>Movie</h4>
+    <hr />
+    @if (movie is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">Title</dt>
+            <dd class="col-sm-10">@movie.Title</dd>
+            <dt class="col-sm-2">Description</dt>
+            <dd class="col-sm-10">@movie.Description</dd>
+            <dt class="col-sm-2">RelaseDate</dt>
+            <dd class="col-sm-10">@movie.RelaseDate</dd>
+            <dt class="col-sm-2">Rate</dt>
+            <dd class="col-sm-10">@movie.Rate</dd>
+            <dt class="col-sm-2">Image</dt>
+            <dd class="col-sm-10">
+                @if (!string.IsNullOrEmpty(movie.url))
+                {
+                    <img src="@movie.url" alt="Movie Image" width="100" height="100"/>
+                    
+                }
+                else
+                {
+                    <p>No image available</p>
+                }
+            </dd>
+        </dl>
+        <div>
+            <button class="btn btn-primary" @onclick="() =>EditRateMovie(movie.Id)">Edit Rate Movie</button>
+            <button class="btn btn-danger" @onclick="Back">Back</button>
+            <button class="btn btn-primary" @onclick="() =>EditMovie(movie.Id)">Edit</button>
+        </div>
+    }
+</div>
+
+@code {
+    Movie? movie;
+
+    [SupplyParameterFromQuery]
+    public int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        movie = await DB.Movie.FirstOrDefaultAsync(m => m.Id == Id);
+
+        if (movie is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+    private void EditMovie(int movieId)
+    {
+        NavigationManager.NavigateTo($"movies/edit?id={movieId}");
+    }
+    private void EditRateMovie(int movieId)
+    {
+        NavigationManager.NavigateTo($"movies/editRate?id={movieId}");
+    }
+    private void Back()
+    {
+        NavigationManager.NavigateTo("/movies");
+    }
+}

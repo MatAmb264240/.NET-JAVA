@@ -1,0 +1,11 @@
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\ClassLibrary1\bin\Debug\net8.0\ClassLibrary1.deps.json
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\ClassLibrary1\bin\Debug\net8.0\ClassLibrary1.dll
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\ClassLibrary1\bin\Debug\net8.0\ClassLibrary1.pdb
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\ClassLibrary1\obj\Debug\net8.0\ClassLibrary1.GeneratedMSBuildEditorConfig.editorconfig
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\ClassLibrary1\obj\Debug\net8.0\ClassLibrary1.AssemblyInfoInputs.cache
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\ClassLibrary1\obj\Debug\net8.0\ClassLibrary1.AssemblyInfo.cs
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\ClassLibrary1\obj\Debug\net8.0\ClassLibrary1.csproj.CoreCompileInputs.cache
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\ClassLibrary1\obj\Debug\net8.0\ClassLibrary1.dll
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\ClassLibrary1\obj\Debug\net8.0\refint\ClassLibrary1.dll
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\ClassLibrary1\obj\Debug\net8.0\ClassLibrary1.pdb
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\ClassLibrary1\obj\Debug\net8.0\ref\ClassLibrary1.dll

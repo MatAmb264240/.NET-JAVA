@@ -1,0 +1,11 @@
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\Matrix_Parallel\bin\Debug\net8.0\Matrix_Parallel.deps.json
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\Matrix_Parallel\bin\Debug\net8.0\Matrix_Parallel.dll
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\Matrix_Parallel\bin\Debug\net8.0\Matrix_Parallel.pdb
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\Matrix_Parallel\obj\Debug\net8.0\Matrix_Parallel.GeneratedMSBuildEditorConfig.editorconfig
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\Matrix_Parallel\obj\Debug\net8.0\Matrix_Parallel.AssemblyInfoInputs.cache
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\Matrix_Parallel\obj\Debug\net8.0\Matrix_Parallel.AssemblyInfo.cs
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\Matrix_Parallel\obj\Debug\net8.0\Matrix_Parallel.csproj.CoreCompileInputs.cache
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\Matrix_Parallel\obj\Debug\net8.0\Matrix_Parallel.dll
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\Matrix_Parallel\obj\Debug\net8.0\refint\Matrix_Parallel.dll
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\Matrix_Parallel\obj\Debug\net8.0\Matrix_Parallel.pdb
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Multi_threading\Matrix_Parallel\obj\Debug\net8.0\ref\Matrix_Parallel.dll

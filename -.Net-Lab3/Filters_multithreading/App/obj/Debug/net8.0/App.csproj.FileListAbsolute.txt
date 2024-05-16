@@ -1,0 +1,13 @@
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Filters_multithreading\App\bin\Debug\net8.0\App.deps.json
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Filters_multithreading\App\bin\Debug\net8.0\App.dll
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Filters_multithreading\App\bin\Debug\net8.0\App.pdb
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Filters_multithreading\App\obj\Debug\net8.0\App.csproj.AssemblyReference.cache
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Filters_multithreading\App\obj\Debug\net8.0\App.csproj.ResolveComReference.cache
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Filters_multithreading\App\obj\Debug\net8.0\App.GeneratedMSBuildEditorConfig.editorconfig
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Filters_multithreading\App\obj\Debug\net8.0\App.AssemblyInfoInputs.cache
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Filters_multithreading\App\obj\Debug\net8.0\App.AssemblyInfo.cs
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Filters_multithreading\App\obj\Debug\net8.0\App.csproj.CoreCompileInputs.cache
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Filters_multithreading\App\obj\Debug\net8.0\App.dll
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Filters_multithreading\App\obj\Debug\net8.0\refint\App.dll
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Filters_multithreading\App\obj\Debug\net8.0\App.pdb
+D:\All\Studia\Zajecia\Semestr_6\.NET JAVA\Filters_multithreading\App\obj\Debug\net8.0\ref\App.dll

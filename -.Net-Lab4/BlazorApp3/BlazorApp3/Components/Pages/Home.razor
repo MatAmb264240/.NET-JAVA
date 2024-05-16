@@ -1,0 +1,48 @@
+﻿@page "/"
+@using System.Collections.Generic
+
+<h1>Witaj na mojej stronie domowej!</h1>
+
+<p>Tutaj możesz oceniać i dodawać filmy.</p>
+
+@if (newsArticles != null && newsArticles.Count > 0)
+{
+    <h2>Najnowsze filmy które polecamy</h2>
+    <ul>
+        @foreach (var article in newsArticles)
+        {
+            <li>@article.Title - @article.Date.ToShortDateString()</li>
+        }
+    </ul>
+}
+else
+{
+    <p>Brak aktualnych artykułów.</p>
+}
+
+@code {
+    List<Article> newsArticles;
+
+    protected override void OnInitialized()
+    {
+        // Tutaj możesz pobrać listę najnowszych artykułów z bazy danych lub innego źródła danych
+        newsArticles = GetLatestArticles();
+    }
+
+    List<Article> GetLatestArticles()
+    {
+        // Tu symulujemy pobranie danych z bazy danych
+        return new List<Article>
+        {
+            new Article { Title = "Diuna", Date = DateTime.Now.AddDays(-1) },
+            new Article { Title = "Batman", Date = DateTime.Now.AddDays(-2) },
+            new Article { Title = "Iron man", Date = DateTime.Now.AddDays(-3) }
+        };
+    }
+
+    public class Article
+    {
+        public string Title { get; set; }
+        public DateTime Date { get; set; }
+    }
+}
